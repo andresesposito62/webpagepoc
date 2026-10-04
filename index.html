@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luisa Valencia | Psicóloga Clínica</title>
+<style>
+:root{--cream:#fbf6f2;--beige:#f3e4d8;--blush:#f6e1da;--terra:#c0807a;--terra-dark:#a8665f;--taupe:#6b4a45;--sage:#8f9a7c;--ink:#4a3834;--muted:#7d6a65;--line:#eadbd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-weight:300}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:auto;padding:0 24px}
+.serif,h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+.eyebrow{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.btn{display:inline-block;padding:13px 30px;border-radius:999px;background:var(--terra);color:#fff;font-size:.95rem;transition:.25s;border:1px solid var(--terra)}
+.btn:hover{background:var(--terra-dark);transform:translateY(-2px)}
+.btn.out{background:transparent;color:var(--ink);border-color:var(--taupe)}
+.btn.out:hover{background:var(--blush)}
+.btn.sm{padding:10px 24px;font-size:.88rem}
+header{background:var(--cream);position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand svg{width:38px;height:44px;stroke:var(--terra-dark)}
+.brand b{display:block;font-family:Georgia,serif;font-weight:400;font-size:1.35rem;color:var(--taupe);line-height:1.1}
+.brand small{color:var(--terra);font-size:.85rem}
+nav ul{display:flex;gap:30px;list-style:none;font-size:.9rem}
+nav ul a{padding-bottom:3px}
+nav ul a.on,nav ul a:hover{border-bottom:1px solid var(--taupe)}
+.hero{background:linear-gradient(100deg,var(--cream) 0%,var(--cream) 30%,#f1dccd 62%,#d9a99a 100%);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;min-height:500px;gap:20px;padding-top:50px;padding-bottom:50px}
+h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.2;color:var(--taupe);margin-bottom:22px}
+.hero p{max-width:440px;margin-bottom:30px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.scene{position:relative;height:380px}
+.sofa{position:absolute;right:-60px;bottom:0;width:300px;height:180px;background:linear-gradient(#e7d3c3,#d8bfae);border-radius:40px 0 0 20px}
+.pillow{position:absolute;right:-10px;bottom:90px;width:130px;height:130px;background:#b86f62;border-radius:22px;transform:rotate(-6deg)}
+.table{position:absolute;left:30px;bottom:0;width:150px;height:110px;background:linear-gradient(#d2a679,#b98c5f);border-radius:70px 70px 6px 6px/24px 24px 6px 6px}
+.vase{position:absolute;left:68px;bottom:108px;width:60px;height:96px;background:#f6efe9;border-radius:50% 50% 40% 40%}
+.plant{position:absolute;left:55px;bottom:195px;width:90px;height:120px;background:radial-gradient(ellipse at 50% 70%,#7c8a64,#5c6b48 60%,transparent 62%);border-radius:50%;opacity:.9}
+section{padding:70px 0}
+.acomp h2{font-size:1.5rem;color:var(--taupe);margin-bottom:28px}
+.acomp .row{display:grid;grid-template-columns:repeat(5,1fr) 130px 1.1fr;gap:0;align-items:stretch}
+.item{text-align:center;padding:10px 14px;border-right:1px solid var(--line)}
+.ic{width:58px;height:58px;margin:0 auto 14px;border-radius:50%;background:var(--blush);display:grid;place-items:center}
+.ic svg,.mini svg{width:26px;height:26px;stroke:var(--taupe);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.item h3{font-size:1rem;margin-bottom:6px;color:var(--ink)}
+.item p{font-size:.8rem;color:var(--muted)}
+.leaf{background:linear-gradient(160deg,#c9a99a,#7d7a5c);border-radius:6px 6px 0 0}
+.quote{background:var(--blush);padding:28px 22px;display:flex;align-items:center;font-family:Georgia,serif;font-style:italic;color:var(--taupe);font-size:1.05rem;line-height:1.5}
+.about .wrap{display:grid;grid-template-columns:1fr 280px 1fr;gap:40px;align-items:center}
+.about h2{font-size:1.8rem;color:var(--taupe);line-height:1.3;margin-bottom:18px}
+.about p{font-size:.92rem;color:var(--muted);margin-bottom:24px}
+.photo{height:340px;border-radius:4px;background:linear-gradient(170deg,#e9cdb9,#c99f8d 60%,#e6d8cb);display:grid;place-items:end center;overflow:hidden}
+.photo svg{width:200px;fill:#f2e7dc}
+.facts{list-style:none}
+.facts li{display:flex;align-items:center;gap:16px;padding:16px 0;font-size:.9rem;color:var(--taupe)}
+.mini svg{width:28px;height:28px}
+.band{background:linear-gradient(120deg,#c79d90,#d4aa9d);color:#fff;text-align:center;padding:60px 24px}
+.band h2{font-style:italic;font-size:1.5rem;margin-bottom:16px;opacity:.95}
+.band p{max-width:420px;margin:auto;font-size:.95rem}
+.info .wrap{display:grid;grid-template-columns:1.1fr 1.2fr 1fr;gap:40px;align-items:center}
+.still{height:200px;border-radius:4px;background:linear-gradient(135deg,#ecd9c6,#c9a27c 55%,#8f9a7c)}
+.info h2{font-size:1.5rem;color:var(--taupe);line-height:1.3;margin:6px 0 12px}
+.info p{font-size:.85rem;color:var(--muted);margin-bottom:18px}
+.blog{border-left:1px solid var(--line);padding-left:36px}
+.blog a{display:inline-flex;gap:10px;font-size:.88rem;color:var(--taupe);margin-top:8px}
+footer{border-top:1px solid var(--line);padding:36px 0 18px}
+footer .wrap{display:grid;grid-template-columns:1fr 1.2fr auto;gap:30px;align-items:center}
+footer ul{list-style:none;font-size:.85rem;color:var(--muted)}
+footer li{padding:3px 0}
+.soc{display:flex;gap:12px;margin-top:8px}
+.soc span{width:36px;height:36px;border-radius:50%;background:var(--terra);display:grid;place-items:center;color:#fff;font-size:.75rem}
+.tag{text-align:center;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:16px}
+.trayectoria{background:#fff8f4;border-top:1px solid var(--line)}
+.tgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.tgrid h3{font-size:1.15rem;color:var(--terra-dark);margin-bottom:14px}
+.ti{border-left:2px solid var(--blush);padding:2px 0 2px 18px;margin-bottom:18px}
+.ti b{display:block;font-weight:600;color:var(--taupe);font-size:.93rem}
+.ti span{display:block;font-size:.8rem;color:var(--terra)}
+.ti p{font-size:.85rem;color:var(--muted);margin-top:4px}
+@media(max-width:900px){
+ .tgrid{grid-template-columns:1fr;gap:30px}
+ nav ul{display:none}
+ .hero .wrap,.about .wrap,.info .wrap,footer .wrap{grid-template-columns:1fr}
+ .scene{display:none}
+ .acomp .row{grid-template-columns:1fr 1fr}
+ .item{border:0;padding:16px 8px}
+ .leaf{height:160px}
+ .blog{border:0;padding:0}
+ .photo{max-width:280px;margin:auto}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+  <a class="brand" href="#">
+    <svg viewBox="0 0 40 46" fill="none" stroke-width="1.3" stroke-linecap="round"><path d="M20 44C20 30 14 20 6 8c12 2 18 12 14 36z"/><path d="M20 44c0-12 6-20 14-30-10 2-16 10-14 30z"/><path d="M20 44V14"/></svg>
+    <span><b>Luisa Valencia</b><small>Psicóloga Clínica</small></span>
+  </a>
+  <ul>
+    <li><a class="on" href="#">Inicio</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="btn sm" href="#contacto">Agenda tu cita</a>
+</nav></div></header>
+
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <div class="eyebrow">Psicología clínica</div>
+    <h1>Acompañamiento psicológico para vivir con más claridad, equilibrio y bienestar.</h1>
+    <p>Psicóloga, especialista en Psicología Clínica y Salud Mental. Atención a niños, adolescentes y adultos desde un enfoque basado en la evidencia, orientado al bienestar emocional.</p>
+    <div class="cta"><a class="btn" href="#contacto">Agenda una consulta</a><a class="btn out" href="#sobre-mi">Conoce más</a></div>
+  </div>
+  <div class="scene" aria-hidden="true"><div class="sofa"></div><div class="pillow"></div><div class="plant"></div><div class="vase"></div><div class="table"></div></div>
+</div></section>
+
+<section class="acomp" id="servicios" style="padding:44px 0"><div class="wrap">
+  <h2>Te acompaño en</h2>
+  <div class="row">
+    <div class="item"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 4a4 4 0 0 0-4 4 3 3 0 0 0-1 5 3 3 0 0 0 3 4 3 3 0 0 0 5 1V5a3 3 0 0 0-3-1z"/><path d="M15 4a4 4 0 0 1 4 4 3 3 0 0 1 1 5 3 3 0 0 1-3 4"/></svg></div><h3>Trastornos emocionales</h3><p>Ansiedad y depresión desde el enfoque cognitivo conductual.</p></div>
+    <div class="item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14a4 4 0 0 0 7 0M9 9.5h.01M15 9.5h.01"/></svg></div><h3>Regulación emocional</h3><p>Herramientas de terapia dialéctica conductual (DBT) y ACT.</p></div>
+    <div class="item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></div><h3>Infancia y adolescencia</h3><p>Dificultades emocionales, comportamentales y de aprendizaje.</p></div>
+    <div class="item"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="9" r="2.5"/><path d="M2 20c0-3 2.5-5 6-5s6 2 6 5M15 15c3 0 6 1.5 6 5"/></svg></div><h3>Pareja y familia</h3><p>Pautas de crianza, vínculos y técnicas de terapia de pareja.</p></div>
+    <div class="item" style="border-right:0"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg></div><h3>Trauma y resiliencia</h3><p>Acompañamiento a víctimas de violencia, duelo y desplazamiento.</p></div>
+    <div class="leaf"></div>
+    <div class="quote">“No tienes que hacerlo todo sola. Aquí estoy para acompañarte.”</div>
+  </div>
+</div></section>
+
+<section class="about" id="sobre-mi"><div class="wrap">
+  <div>
+    <div class="eyebrow">Sobre mí</div>
+    <h2>Soy Luisa Fernanda Valencia, psicóloga especialista en Psicología Clínica y Salud Mental.</h2>
+    <p>Tengo experiencia en evaluación, diagnóstico e intervención terapéutica con población infantil, adolescente y adulta, en contextos individuales, familiares y comunitarios. He trabajado con menores en procesos de restablecimiento de derechos y con familias en situación de vulnerabilidad, articulando redes de apoyo y equipos interdisciplinarios.</p>
+    <a class="btn sm" href="#contacto">Conoce más sobre mí</a>
+  </div>
+  <div class="photo" aria-label="Foto de Luisa Valencia"><svg viewBox="0 0 200 160"><circle cx="100" cy="55" r="38"/><path d="M10 160c0-50 40-62 90-62s90 12 90 62z"/></svg></div>
+  <ul class="facts">
+    <li><span class="mini"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"/></svg></span>Especialista en Psicología Clínica y Salud Mental, U. Pontificia Bolivariana</li>
+    <li><span class="mini"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></span>Psicóloga, U. Cooperativa de Colombia (2016)</li>
+    <li><span class="mini"><svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/></svg></span>Enfoque basado en la evidencia: TCC, DBT y ACT</li>
+    <li><span class="mini"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6L12 16.7 6.6 19.6l1.1-6L3.2 9.4l6.1-.8z"/></svg></span>Ética profesional y compromiso social</li>
+  </ul>
+</div></section>
+
+<section class="trayectoria" id="trayectoria"><div class="wrap">
+  <h2 class="serif" style="font-size:1.8rem;color:var(--taupe);margin-bottom:32px">Trayectoria y formación</h2>
+  <div class="tgrid">
+    <div>
+      <h3>Experiencia</h3>
+      <div class="ti"><b>Psicóloga, apoyo psicológico especializado</b><span>Fundación Los Pisingos · oct 2023 – actualidad</span><p>Atención psicológica a niños, niñas y adolescentes en procesos de restablecimiento de derechos, e intervención con sus familias.</p></div>
+      <div class="ti"><b>Psicóloga Senior, consulta externa</b><span>Clínica Proyectarte · mayo – oct 2023</span><p>Evaluación e intervención psicológica individual, grupal y familiar.</p></div>
+      <div class="ti"><b>Psicóloga, apoyo psicológico especializado</b><span>Corporación CERFAMI · nov 2018 – mayo 2023</span><p>Atención a familias en condición de vulnerabilidad en la modalidad Familias con Bienestar del ICBF.</p></div>
+      <div class="ti"><b>Psicóloga, apoyo psicosocial</b><span>Corporación Lenguaje Ciudadano · feb – mayo 2018</span></div>
+      <div class="ti"><b>Psicóloga, apoyo psicosocial</b><span>Fundación IMIX · abr – dic 2017</span><p>Atención a primera infancia y sus familias.</p></div>
+    </div>
+    <div>
+      <h3>Formación académica</h3>
+      <div class="ti"><b>Especialización en Psicología Clínica y Salud Mental</b><span>Universidad Pontificia Bolivariana, Medellín · 2019 – 2020</span></div>
+      <div class="ti"><b>Pregrado en Psicología</b><span>Universidad Cooperativa de Colombia, Villavicencio · 2011 – 2016</span></div>
+      <h3 style="margin-top:26px">Formación adicional</h3>
+      <div class="ti"><b>Atención integral en salud a víctimas de violencia sexual</b><span>Curso · 2025</span></div>
+      <div class="ti"><b>Trastornos emocionales y afectivos, enfoque cognitivo conductual</b><span>Curso · 2025</span></div>
+      <div class="ti"><b>Terapias y técnicas de evaluación e intervención en psicología clínica</b><span>Diplomado · 2024</span></div>
+      <div class="ti"><b>Psicología clínica infantil y juvenil</b><span>Diplomado · 2024</span></div>
+      <div class="ti"><b>Terapia dialéctica conductual (DBT)</b><span>Diplomado · 2023</span></div>
+      <div class="ti"><b>Terapia de aceptación y compromiso</b><span>Curso · 2022</span></div>
+      <div class="ti"><b>Técnicas de intervención en terapia de pareja</b><span>Curso · 2022</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="band">
+  <h2>Tu bienestar emocional también es una prioridad.</h2>
+  <p>Te ofrezco un espacio seguro, libre de juicios, donde puedas ser tú, con todo lo que sientes.</p>
+</div>
+
+<section class="info" id="blog"><div class="wrap">
+  <div class="still" aria-hidden="true"></div>
+  <div>
+    <div class="eyebrow" style="letter-spacing:.05em;text-transform:none">Preguntas frecuentes</div>
+    <h2>Resuelve tus dudas antes de iniciar tu proceso</h2>
+    <p>Aquí encontrarás información sobre el proceso terapéutico, la duración de las sesiones y la modalidad (presencial o virtual).</p>
+    <a class="btn sm" href="#contacto">Ver preguntas frecuentes</a>
+  </div>
+  <div class="blog">
+    <div class="eyebrow" style="letter-spacing:.05em;text-transform:none">Blog</div>
+    <h2>Reflexiones sobre salud mental y bienestar</h2>
+    <p>Artículos, consejos y herramientas para tu vida diaria.</p>
+    <a href="#">Ir al blog <span>⟶</span></a>
+  </div>
+</div></section>
+
+<footer id="contacto"><div class="wrap">
+  <div class="brand">
+    <svg viewBox="0 0 40 46" fill="none" stroke-width="1.3" stroke-linecap="round"><path d="M20 44C20 30 14 20 6 8c12 2 18 12 14 36z"/><path d="M20 44c0-12 6-20 14-30-10 2-16 10-14 30z"/><path d="M20 44V14"/></svg>
+    <span><b>Luisa Valencia</b><small>Psicóloga Clínica</small></span>
+  </div>
+  <ul><li>📍 Cajicá, Cundinamarca</li><li>✉️ <a href="mailto:lu.valeno@gmail.com">lu.valeno@gmail.com</a></li><li>📞 <a href="tel:+573145314993">314 531 4993</a></li></ul>
+  <div><small style="color:var(--muted)">Sígueme en redes</small><div class="soc"><span>IG</span><span>in</span><span>WA</span></div></div>
+</div>
+<div class="tag">Tu bienestar emocional importa</div></footer>
+</body>
+</html>

@@ -1,0 +1,1 @@
+Voy a ayudarte a crear una página web basada en el look and feel de una página web conocida: analizaremos su estilo visual, paleta de colores, tipografía y layout, y escribiremos juntos el código para replicarlo.
