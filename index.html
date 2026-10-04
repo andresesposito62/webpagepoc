@@ -32,7 +32,8 @@ nav ul a.on,nav ul a:hover{border-bottom:1px solid var(--taupe)}
 h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.2;color:var(--taupe);margin-bottom:22px}
 .hero p{max-width:440px;margin-bottom:30px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.scene{position:relative;height:380px}
+.scene{position:relative;height:380px;margin-right:-24px}
+.scene img{width:100%;height:100%;object-fit:cover;object-position:left center;-webkit-mask-image:linear-gradient(to right,transparent,#000 35%);mask-image:linear-gradient(to right,transparent,#000 35%)}
 .sofa{position:absolute;right:-60px;bottom:0;width:300px;height:180px;background:linear-gradient(#e7d3c3,#d8bfae);border-radius:40px 0 0 20px}
 .pillow{position:absolute;right:-10px;bottom:90px;width:130px;height:130px;background:#b86f62;border-radius:22px;transform:rotate(-6deg)}
 .table{position:absolute;left:30px;bottom:0;width:150px;height:110px;background:linear-gradient(#d2a679,#b98c5f);border-radius:70px 70px 6px 6px/24px 24px 6px 6px}
@@ -46,13 +47,13 @@ section{padding:70px 0}
 .ic svg,.mini svg{width:26px;height:26px;stroke:var(--taupe);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .item h3{font-size:1rem;margin-bottom:6px;color:var(--ink)}
 .item p{font-size:.8rem;color:var(--muted)}
-.leaf{background:linear-gradient(160deg,#c9a99a,#7d7a5c);border-radius:6px 6px 0 0}
+.leaf{background:url(img/hoja.jpg) center/cover;border-radius:6px 6px 0 0}
 .quote{background:var(--blush);padding:28px 22px;display:flex;align-items:center;font-family:Georgia,serif;font-style:italic;color:var(--taupe);font-size:1.05rem;line-height:1.5}
 .about .wrap{display:grid;grid-template-columns:1fr 280px 1fr;gap:40px;align-items:center}
 .about h2{font-size:1.8rem;color:var(--taupe);line-height:1.3;margin-bottom:18px}
 .about p{font-size:.92rem;color:var(--muted);margin-bottom:24px}
-.photo{height:340px;border-radius:4px;background:linear-gradient(170deg,#e9cdb9,#c99f8d 60%,#e6d8cb);display:grid;place-items:end center;overflow:hidden}
-.photo svg{width:200px;fill:#f2e7dc}
+.photo{height:340px;border-radius:4px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
 .facts{list-style:none}
 .facts li{display:flex;align-items:center;gap:16px;padding:16px 0;font-size:.9rem;color:var(--taupe)}
 .mini svg{width:28px;height:28px}
@@ -60,7 +61,7 @@ section{padding:70px 0}
 .band h2{font-style:italic;font-size:1.5rem;margin-bottom:16px;opacity:.95}
 .band p{max-width:420px;margin:auto;font-size:.95rem}
 .info .wrap{display:grid;grid-template-columns:1.1fr 1.2fr 1fr;gap:40px;align-items:center}
-.still{height:200px;border-radius:4px;background:linear-gradient(135deg,#ecd9c6,#c9a27c 55%,#8f9a7c)}
+.still{height:200px;border-radius:4px;background:url(img/escritorio.jpg) center/cover}
 .info h2{font-size:1.5rem;color:var(--taupe);line-height:1.3;margin:6px 0 12px}
 .info p{font-size:.85rem;color:var(--muted);margin-bottom:18px}
 .blog{border-left:1px solid var(--line);padding-left:36px}
@@ -70,7 +71,7 @@ footer .wrap{display:grid;grid-template-columns:1fr 1.2fr auto;gap:30px;align-it
 footer ul{list-style:none;font-size:.85rem;color:var(--muted)}
 footer li{padding:3px 0}
 .soc{display:flex;gap:12px;margin-top:8px}
-.soc span{width:36px;height:36px;border-radius:50%;background:var(--terra);display:grid;place-items:center;color:#fff;font-size:.75rem}
+.soc span,.soc a{width:36px;height:36px;border-radius:50%;background:var(--terra);display:grid;place-items:center;color:#fff;font-size:.75rem}
 .tag{text-align:center;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:16px}
 @media(max-width:900px){
  nav ul{display:none}
@@ -97,7 +98,7 @@ footer li{padding:3px 0}
     <li><a href="#blog">Blog</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
-  <a class="btn sm" href="#contacto">Agenda tu cita</a>
+  <a class="btn sm" href="https://wa.me/573145314993?text=Hola%20Luisa%2C%20quisiera%20agendar%20una%20cita" target="_blank" rel="noopener">Agenda tu cita</a>
 </nav></div></header>
 
 <section class="hero" style="padding:0"><div class="wrap">
@@ -105,9 +106,9 @@ footer li{padding:3px 0}
     <div class="eyebrow">Psicología clínica</div>
     <h1>Acompañamiento psicológico para vivir con más claridad, equilibrio y bienestar.</h1>
     <p>Te acompaño en tus procesos emocionales, tus decisiones y tus cambios, desde un enfoque clínico y humano.</p>
-    <div class="cta"><a class="btn" href="#contacto">Agenda una consulta</a><a class="btn out" href="#sobre-mi">Conoce más</a></div>
+    <div class="cta"><a class="btn" href="https://wa.me/573145314993?text=Hola%20Luisa%2C%20quisiera%20agendar%20una%20cita" target="_blank" rel="noopener">Agenda una consulta</a><a class="btn out" href="#sobre-mi">Conoce más</a></div>
   </div>
-  <div class="scene" aria-hidden="true"><div class="sofa"></div><div class="pillow"></div><div class="plant"></div><div class="vase"></div><div class="table"></div></div>
+  <div class="scene" aria-hidden="true"><img src="img/hero.jpg" alt=""></div>
 </div></section>
 
 <section class="acomp" id="servicios" style="padding:44px 0"><div class="wrap">
@@ -130,7 +131,7 @@ footer li{padding:3px 0}
     <p>Creo en el poder de una relación terapéutica basada en la confianza, el respeto y la autenticidad. Mi enfoque integra herramientas de la psicología clínica con una mirada humana y cercana a cada historia.</p>
     <a class="btn sm" href="#contacto">Conoce más sobre mí</a>
   </div>
-  <div class="photo" aria-label="Foto de Luisa Valencia"><svg viewBox="0 0 200 160"><circle cx="100" cy="55" r="38"/><path d="M10 160c0-50 40-62 90-62s90 12 90 62z"/></svg></div>
+  <div class="photo"><img src="img/retrato.jpg" alt="Luisa Valencia, psicóloga clínica"></div>
   <ul class="facts">
     <li><span class="mini"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"/></svg></span>Formación académica</li>
     <li><span class="mini"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/></svg></span>Experiencia</li>
@@ -165,8 +166,8 @@ footer li{padding:3px 0}
     <svg viewBox="0 0 40 46" fill="none" stroke-width="1.3" stroke-linecap="round"><path d="M20 44C20 30 14 20 6 8c12 2 18 12 14 36z"/><path d="M20 44c0-12 6-20 14-30-10 2-16 10-14 30z"/><path d="M20 44V14"/></svg>
     <span><b>Luisa Valencia</b><small>Psicóloga Clínica</small></span>
   </div>
-  <ul><li>📍 Cajicá, Cundinamarca</li><li>✉️ hola@luisavalencia.com</li><li>📞 +57 300 123 4567</li></ul>
-  <div><small style="color:var(--muted)">Sígueme en redes</small><div class="soc"><span>IG</span><span>in</span><span>WA</span></div></div>
+  <ul><li>📍 Cajicá, Cundinamarca</li><li>✉️ hola@luisavalencia.com</li><li>📞 <a href="tel:+573145314993">+57 314 531 4993</a></li></ul>
+  <div><small style="color:var(--muted)">Sígueme en redes</small><div class="soc"><span>IG</span><span>in</span><a href="https://wa.me/573145314993?text=Hola%20Luisa%2C%20quisiera%20agendar%20una%20cita" target="_blank" rel="noopener" aria-label="Escríbeme por WhatsApp">WA</a></div></div>
 </div>
 <div class="tag">Tu bienestar emocional importa</div></footer>
 </body>
