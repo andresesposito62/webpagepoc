@@ -27,13 +27,15 @@ nav{display:flex;align-items:center;justify-content:space-between;height:76px}
 nav ul{display:flex;gap:30px;list-style:none;font-size:.9rem}
 nav ul a{padding-bottom:3px}
 nav ul a.on,nav ul a:hover{border-bottom:1px solid var(--taupe)}
-.hero{background:linear-gradient(100deg,var(--cream) 0%,var(--cream) 30%,#f1dccd 62%,#d9a99a 100%);position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;min-height:500px;gap:20px;padding-top:50px;padding-bottom:50px}
-h1{font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.2;color:var(--taupe);margin-bottom:22px}
-.hero p{max-width:440px;margin-bottom:30px}
+.hero{background:linear-gradient(90deg,#fbf6f2 0%,#f9eeea 75%,#f3e2d9 100%);position:relative;overflow:hidden;aspect-ratio:1600/553;max-width:1600px;margin:0 auto}
+.hero::before{content:"";position:absolute;right:0;top:0;bottom:0;width:48.1%;background:url(img/hero.jpg) right center/cover no-repeat;-webkit-mask-image:linear-gradient(to right,transparent,#000 14%);mask-image:linear-gradient(to right,transparent,#000 14%)}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,46%);align-items:center;max-width:none;height:100%;padding:0 0 0 6.1vw}
+.hero .eyebrow{font-size:clamp(.75rem,.8vw,.95rem)}
+h1{font-size:clamp(1.7rem,3.3vw,3.25rem);line-height:1.2;color:var(--taupe);margin-bottom:.45em}
+.hero p{max-width:26em;margin-bottom:1.6em;font-size:clamp(.92rem,1.15vw,1.15rem);color:var(--ink);font-weight:400;line-height:1.7}
+.hero .btn{padding:.75em 2em;font-size:clamp(.85rem,1vw,1rem)}
+
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
-.scene{position:relative;height:380px;margin-right:-24px}
-.scene img{width:100%;height:100%;object-fit:cover;object-position:left center;-webkit-mask-image:linear-gradient(to right,transparent,#000 35%);mask-image:linear-gradient(to right,transparent,#000 35%)}
 .sofa{position:absolute;right:-60px;bottom:0;width:300px;height:180px;background:linear-gradient(#e7d3c3,#d8bfae);border-radius:40px 0 0 20px}
 .pillow{position:absolute;right:-10px;bottom:90px;width:130px;height:130px;background:#b86f62;border-radius:22px;transform:rotate(-6deg)}
 .table{position:absolute;left:30px;bottom:0;width:150px;height:110px;background:linear-gradient(#d2a679,#b98c5f);border-radius:70px 70px 6px 6px/24px 24px 6px 6px}
@@ -73,10 +75,13 @@ footer li{padding:3px 0}
 .soc{display:flex;gap:12px;margin-top:8px}
 .soc span,.soc a{width:36px;height:36px;border-radius:50%;background:var(--terra);display:grid;place-items:center;color:#fff;font-size:.75rem}
 .tag{text-align:center;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:16px}
+@media(min-width:1601px){.hero{border-radius:0 0 24px 24px}}
 @media(max-width:900px){
  nav ul{display:none}
  .hero .wrap,.about .wrap,.info .wrap,footer .wrap{grid-template-columns:1fr}
- .scene{display:none}
+ .hero::before{opacity:.25;width:100%}
+ .hero{aspect-ratio:auto}
+ .hero .wrap{padding:40px 24px;height:auto;min-height:355px}
  .acomp .row{grid-template-columns:1fr 1fr}
  .item{border:0;padding:16px 8px}
  .leaf{height:160px}
@@ -108,7 +113,6 @@ footer li{padding:3px 0}
     <p>Te acompaño en tus procesos emocionales, tus decisiones y tus cambios, desde un enfoque clínico y humano.</p>
     <div class="cta"><a class="btn" href="https://wa.me/573145314993?text=Hola%20Luisa%2C%20quisiera%20agendar%20una%20cita" target="_blank" rel="noopener">Agenda una consulta</a><a class="btn out" href="#sobre-mi">Conoce más</a></div>
   </div>
-  <div class="scene" aria-hidden="true"><img src="img/hero.jpg" alt=""></div>
 </div></section>
 
 <section class="acomp" id="servicios" style="padding:44px 0"><div class="wrap">
