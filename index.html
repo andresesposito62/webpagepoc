@@ -82,9 +82,13 @@ footer li{padding:3px 0}
  .hero::before{opacity:.25;width:100%}
  .hero{aspect-ratio:auto}
  .hero .wrap{padding:40px 24px;height:auto;min-height:355px}
- .acomp .row{grid-template-columns:1fr 1fr}
- .item{border:0;padding:16px 8px}
- .leaf{height:160px}
+ .acomp .row{grid-template-columns:1fr 1fr;gap:12px}
+ .item{border:0 !important;padding:20px 10px;background:#fff8f4;border-radius:14px}
+ .item:nth-child(5){grid-column:1/-1}
+ .leaf{min-height:200px;border-radius:14px}
+ .quote{border-radius:14px;padding:22px 18px}
+ .hero .wrap{grid-template-columns:minmax(0,1fr)}
+ h1{font-size:1.9rem}
  .blog{border:0;padding:0}
  .photo{max-width:280px;margin:auto}
 }
